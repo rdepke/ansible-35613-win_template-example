@@ -1,3 +1,0 @@
-- name: Make sure the default Default organization exists
-  tower_organization:
-    name: Default
