@@ -1,0 +1,19 @@
+﻿<behaviors>
+  <serviceBehaviors>
+    <behavior name="LocalServiceBehavior">
+      <serviceMetadata httpGetEnabled="false" httpsGetEnabled="false" />
+      <serviceDebug includeExceptionDetailInFaults="false" />
+    </behavior>
+  </serviceBehaviors>
+
+  <endpointBehaviors>
+    <behavior name="CertificateSecurityBehavior">
+      <clientCredentials>
+        <clientCertificate storeLocation="LocalMachine" storeName="My" x509FindType="{{x509_find_type}}" findValue="{{find_value}}" />
+        <serviceCertificate>
+          <authentication certificateValidationMode="PeerTrust" />
+        </serviceCertificate>
+      </clientCredentials>
+    </behavior>
+  </endpointBehaviors>
+</behaviors>

@@ -8,5 +8,4 @@
     ansible_winrm_server_cert_validation: ignore
     
   roles:
-    #- win_template-fail
     - win-copy-error

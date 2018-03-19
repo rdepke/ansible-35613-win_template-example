@@ -1,0 +1,10 @@
+- name: copy something
+  win_copy:
+    force: yes
+    src: toCopy
+    dest: C:\tmp\Services\
+
+- name: some win_template is present fails
+  win_template:
+    src: Behaviors.config.jinja2
+    dest: C:\tmp\Behaviors.config
