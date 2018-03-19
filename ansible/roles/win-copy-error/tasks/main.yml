@@ -1,0 +1,11 @@
+- name: win_copy are present works
+  win_copy:
+    force: yes
+    src: toCopy
+    dest: C:\tmp\Services\
+
+- name: win_copy are present fails
+  win_copy:
+    force: yes
+    src: toCopy
+    dest: C:\tmp\Services2\
